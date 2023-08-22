@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h3>Bài tập quản lý tuyển sinh</h3>
+      <div class="form-group">
+        <label for="">Nhập vào điểm chuẩn của hội đồng</label>
+        <input
+          type="text"
+          name=""
+          id="diemChuan"
+          class="form-control"
+          placeholder=""
+        />
+      </div>
+      <div class="form-group">
+        <label for="">Nhập vào điểm môn thi thứ nhất</label>
+        <input
+          type="text"
+          name=""
+          id="diem1"
+          class="form-control"
+          placeholder=""
+        />
+      </div>
+      <div class="form-group">
+        <label for="">Nhập vào điểm môn thi thứ hai</label>
+        <input
+          type="text"
+          name=""
+          id="diem2"
+          class="form-control"
+          placeholder=""
+        />
+      </div>
+      <div class="form-group">
+        <label for="">Nhập vào điểm môn thi thứ ba</label>
+        <input
+          type="text"
+          name=""
+          id="diem3"
+          class="form-control"
+          placeholder=""
+        />
+      </div>
+      <div class="form-group">
+        <label for="">Nhập vào khu vực thi</label>
+        <input
+          type="text"
+          name=""
+          id="khuVuc"
+          class="form-control"
+          placeholder=""
+        />
+      </div>
+      <div class="form-group">
+        <label for="">Nhập vào đối tượng dự thi</label>
+        <input
+          type="text"
+          name=""
+          id="doiTuong"
+          class="form-control"
+          placeholder=""
+        />
+      </div>
+      <button id="handleThi">Kết quả</button>
+      <div id="resultThi"></div>
+
+      <h3>Bài tập tính tiền Kw</h3>
+
+      <div class="form-group">
+        <label for="">Nhập vào tên</label>
+        <input
+          type="text"
+          name=""
+          id="tenKw"
+          class="form-control"
+          placeholder=""
+        />
+      </div>
+      <div class="form-group">
+        <label for="">Nhập vào số kW tiêu thụ</label>
+        <input
+          type="text"
+          name=""
+          id="soKw"
+          class="form-control"
+          placeholder=""
+        />
+      </div>
+      <button id="handleKw">Kết quả</button>
+      <div id="resultKw"></div>
+
+      <h3>Bài tập tính thuế thu nhập cá nhập</h3>
+
+      <div class="form-group">
+        <label for="">Nhập vào tên</label>
+        <input
+          type="text"
+          name=""
+          id="ten"
+          class="form-control"
+          placeholder=""
+        />
+      </div>
+      <div class="form-group">
+        <label for="">Nhập vào tổng thu nhập năm</label>
+        <input
+          type="number"
+          name=""
+          id="thuNhap"
+          class="form-control"
+          placeholder=""
+        />
+      </div>
+      <div class="form-group">
+        <label for="">Nhập vào số người phụ thuộc</label>
+        <input
+          type="text"
+          name=""
+          id="soNguoi"
+          class="form-control"
+          placeholder=""
+        />
+      </div>
+      <button id="handleThue">Tính tiền thuế</button>
+      <div id="resultThue"></div>
+
+      <h3>Bài tập tính tiền cáp</h3>
+      <div class="form-group">
+        <label for="">Nhập vào Mã khách hàng</label>
+        <input
+          type="text"
+          name=""
+          id="maKhachHang"
+          class="form-control"
+          placeholder=""
+        />
+      </div>
+      <select id="mySelect" onchange="myFunction()">
+        <option value="">Chọn Loại Khách Hàng</option>
+        <option value="nhaDan">Nhà Dân</option>
+        <option value="doanhNghiep">Doanh Nghiệp</option>
+      </select>
+      <div class="form-group " style="margin-top: 20px;">
+        <input
+          type="number"
+          name=""
+          id="soKenh"
+          class="form-control"
+          placeholder="Nhập vào số kênh cao cấp"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="number"
+          name=""
+          id="soKetNoi"
+          class="form-control"
+          placeholder="Nhập vào số kết nối"
+        />
+      </div>
+      <button id="handleCap">Tính tiền cáp</button>
+      <div id="resultCap"></div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/index.js"></script>
+    <script>
+      function myFunction() {
+        var a = document.getElementById("mySelect").value;
+        document.getElementById("soKetNoi").style.display = "doanhNghiep" == a ? "block" : "none";
+      }
+    </script>
+  </body>
+</html>
